@@ -13,7 +13,7 @@ public class Ball {
 
 	
 	//constructor(s):
-	public ball(int x, int y, int size){
+	public Ball(int xpos, int ypos, int size){
 		 this.xpos = x;
          this.ypos = y;
          this.size = size;
@@ -34,7 +34,36 @@ public class Ball {
 		this.xpos=x;
 	}
 	public void setXVelocity(int x){
-
+		this .setxVelocity =x;
 	}
+	public void setYVelocity(int y){
+		this.setyVelocity=y;
+	}
+	public void reverseY(){
+		yVelocity= -yVelocity;
+	}
+	public void reverseX(){
+		xVelocity= -xVelocity;
+	}
+	public void move(){
+		xpos+= XVelocity;
+		ypos+= YVelocity;
+	}
+	public int getSize(){
+		return size;
+	}
+	public int getYpos(){
+		return ypos;
+	}
+	public int getXpos(){
+		return xpos;
+	}
+	public int getxVelocity(){
+		return xVelocity;
+	}
+	public int getyVelocity(){
+		return yVelocity;
+}
+
 	    
 }
