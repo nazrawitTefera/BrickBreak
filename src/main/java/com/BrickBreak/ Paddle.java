@@ -11,7 +11,13 @@ public class Paddle {
 
 	
 	//don't forget you need instance variables:
+	private int x;
+	private int y;
+	private int width;
+	private int height;
+	private int velocity;
 	
+
 	
 	//constructor(s):
 	
