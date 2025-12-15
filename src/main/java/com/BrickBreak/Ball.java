@@ -21,8 +21,9 @@ public class Ball {
          this.yVelocity = -2;
 	}
 	//methods:
-	//pre
-	//post
+	//pre-xpos, ypos, and size are given
+	//post-a Ball object is created with an initial position, size,
+//       and x and y velocities
 	public void draw(Graphics g){
 		g.setColor(Color.cyan);
 		g.fillOval(x,y,size,size);
@@ -41,16 +42,18 @@ public class Ball {
 	public void setYVelocity(int y){
 		this.setyVelocity=y;
 	}
-	//pre
-	//post
+	//pre-the ball has a yVelocity
+	//post-the ball’s yVelocity is reversed
 	public void reverseY(){
 		yVelocity= -yVelocity;
 	}
+	//pre- the ball has an xVelocity
+	//post- the ball's xVelocity is reversed
 	public void reverseX(){
 		xVelocity= -xVelocity;
 	}
-	//pre
-	//post
+	//pre-the ball has x and y velocities 
+	//post-the ball's velocity is updated
 	public void move(){
 		xpos+= XVelocity;
 		ypos+= YVelocity;

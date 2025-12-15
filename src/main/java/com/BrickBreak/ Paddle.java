@@ -32,16 +32,43 @@ public class Paddle {
 	}
 	
 	//methods:
-	//pre
-	//post
+	//pre-g is a valid Graphics object
+	//post- sets the color of the paddle to be pink and it makes the paddle a rectangle
 	public void draw(Graphics g){
 		g.setColor(Color.pink);
-		g.fillRect(x, velocity, width, height);
+		g.fillRect(x, y, width, height);
 	}
 	public void move(){
 		x+=velocity;
 	}
-	public void add velocity(int )
+	public void addVelocity(int v){
+		velocity+=v;
+	}
+	public void setX(int x){
+		this.x=x;
+	}
+	public void setVelocity(int v){
+		this.Velocity=v;
+	}
+	public int getX(){
+		return x;
+
+	}
+	public int getY(){
+		return y;
+
+	}
+	public int getWidth(){
+		return width;
+
+	}
+	public int getHeight(){
+		return height;
+
+	} 
+	public int getVelocity(){
+		return velocity;
+	}
 
 	
 }
