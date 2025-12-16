@@ -14,8 +14,8 @@ public class Ball {
 	
 	//constructor(s):
 	public Ball(int xpos, int ypos, int size){
-		 this.xpos = x;
-         this.ypos = y;
+		 this.xpos = xpos;
+         this.ypos = ypos;
          this.size = size;
          this.xVelocity = 1;
          this.yVelocity = -2;
@@ -26,7 +26,7 @@ public class Ball {
 //       and x and y velocities
 	public void draw(Graphics g){
 		g.setColor(Color.cyan);
-		g.fillOval(x,y,size,size);
+		g.fillOval(xpos,ypos,size,size);
 	
 	}
     public void setY(int y){
@@ -37,10 +37,10 @@ public class Ball {
 		this.xpos=x;
 	}
 	public void setXVelocity(int x){
-		this .setxVelocity =x;
+		this .xVelocity=x;
 	}
 	public void setYVelocity(int y){
-		this.setyVelocity=y;
+		this.yVelocity=y;
 	}
 	//pre-the ball has a yVelocity
 	//post-the ball’s yVelocity is reversed
@@ -55,8 +55,8 @@ public class Ball {
 	//pre-the ball has x and y velocities 
 	//post-the ball's velocity is updated
 	public void move(){
-		xpos+= XVelocity;
-		ypos+= YVelocity;
+		xpos+= xVelocity;
+		ypos+= yVelocity;
 	}
 	public int getSize(){
 		return size;

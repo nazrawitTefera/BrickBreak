@@ -16,18 +16,19 @@ public class Paddle {
 	private int width;
 	private int height;
 	private int velocity;
-	private int size;
+	
 	
 
 	
 	//constructor(s):
-	public Paddle(int x , int y, int size){
+	public Paddle(int x , int y, int width){
 		this.x=x;
 		this.y=y;
-		this.size=size;
-		this.width=size;
+
+		this.width=2;
 		this.height=2;
 		this.velocity=2;
+		
 
 	}
 	
@@ -48,7 +49,7 @@ public class Paddle {
 		this.x=x;
 	}
 	public void setVelocity(int v){
-		this.Velocity=v;
+		this.velocity=v;
 	}
 	public int getX(){
 		return x;
@@ -69,6 +70,7 @@ public class Paddle {
 	public int getVelocity(){
 		return velocity;
 	}
+	
 
 	
 }
