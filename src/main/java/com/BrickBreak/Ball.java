@@ -1,3 +1,9 @@
+//nazrawit tefera
+//date- dec/2025
+// The Ball class represents a moving ball in the Brick Break game.
+ // It stores the ball’s position, size, and velocity, and provides
+  //methods to draw and move the ball on the screen.
+
 package com.BrickBreak;
 import java.awt.*;
 
@@ -20,10 +26,12 @@ public class Ball {
          this.xVelocity = 1;
          this.yVelocity = -2;
 	}
-	//methods:
-	//pre-xpos, ypos, and size are given
-	//post-a Ball object is created with an initial position, size,
-//       and x and y velocities
+	
+     //Draws the ball on the screen.
+     
+      //Pre: g is a valid Graphics object
+     //Post: A cyan ball is drawn at the current position
+     
 	public void draw(Graphics g){
 		g.setColor(Color.cyan);
 		g.fillOval(xpos,ypos,size,size);
@@ -42,18 +50,30 @@ public class Ball {
 	public void setYVelocity(int y){
 		this.yVelocity=y;
 	}
-	//pre-the ball has a yVelocity
-	//post-the ball’s yVelocity is reversed
+	
+      //Reverses the vertical direction of the ball.
+     
+      //Pre: The ball has a yVelocity
+     //Post: The yVelocity is reversed
+     
 	public void reverseY(){
 		yVelocity= -yVelocity;
 	}
-	//pre- the ball has an xVelocity
-	//post- the ball's xVelocity is reversed
+	
+     //Reverses the horizontal direction of the ball.
+     
+     //Pre: The ball has an xVelocity
+      //Post: The xVelocity is reversed
+    
 	public void reverseX(){
 		xVelocity= -xVelocity;
 	}
-	//pre-the ball has x and y velocities 
-	//post-the ball's velocity is updated
+	 
+     //Moves the ball based on its current velocity.
+     
+     //Pre: The ball has x and y velocities
+      //Post: The ball’s position is updated
+     
 	public void move(){
 		xpos+= xVelocity;
 		ypos+= yVelocity;
